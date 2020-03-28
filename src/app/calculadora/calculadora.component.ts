@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-calculadora',
@@ -28,8 +29,8 @@ export class CalculadoraComponent implements OnInit {
       if (b != null) {
         // ver a estrutura de um switch case
         if (d === '+') {
-
-          this.c = a + b;
+          // this.c = a + b ; não estáva funcionando ??
+          this.c = -(-b) - (-a);
           alert(this.c);
         }
 
@@ -51,7 +52,10 @@ export class CalculadoraComponent implements OnInit {
           alert(this.c);
           // colocar duas condiçoes dentro do msm if  => (d === 'x' ou === 'X')
         }
-
+        if (d === '^~') {
+          this.c = a * b;
+          alert(this.c);
+        }
 
       }
     }
