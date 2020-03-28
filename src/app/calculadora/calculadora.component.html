@@ -1,0 +1,17 @@
+<input type="number" (input)=' n1 = $event.target.value'>
+<br>
+<br>
+<input type="text" (input)=' op = $event.target.value'>
+<br>
+<br>
+<input type="number" (input)=' n2 = $event.target.value'>
+<br>
+<br>
+<button (click)='func(n1,"op",n2)'>
+Operação
+</button>
+
+<h1 *ngIf =" c != null " >    
+{{n1}} {{op}} {{n2}} = {{c}}
+
+</h1>
