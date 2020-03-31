@@ -1,18 +1,36 @@
-<div class="center">
-    <input type="number" (input)=' n1 = $event.target.value'>
-    <br>
-    <br>
-    <br>
-    <input type="text" (input)=' op = $event.target.value'>
-    <br>
-    <br>
-    <input type="number" (input)=' n2 = $event.target.value'>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="center">
+
+        <i class="fab fa-apple" (click)='showNumber(1)'></i>
+        <input type="number" (input)=' n1 = $event.target.value'>
+        <br>
+        <br>
+        <br>
+        <input type="text" (input)=' op = $event.target.value'>
+        <br>
+        <br>
+        <input type="number" (input)=' n2 = $event.target.value'>
+    </div>
+    <button mat-raised-button color="primary" (click)='func(n1,"op",n2)'>Operação</button>
 
 
-<button mat-raised-button color="primary" (click)='func(n1,"op",n2)'>Operação</button>
-<h1 *ngIf=" c != null " class="options">
-    {{n1}} {{op}} {{n2}} = {{c}}
 
-</h1>
+    <h1 *ngIf=" c != null " class="options">
+        {{n1}} {{op}} {{n2}} = {{c}}
 
+    </h1>
+</body>
+
+</html>

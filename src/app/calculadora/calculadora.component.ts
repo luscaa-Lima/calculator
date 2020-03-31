@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-calculadora',
@@ -11,13 +11,17 @@ export class CalculadoraComponent implements OnInit {
   n2: number;
   c: number;
   op: string;
-
+  n = 1;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  showNumber(num: number) {
 
+    alert(num);
+
+  }
   func(a: number, d: string, b: number) {
     d = this.op;
     a = this.n1;
